@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="pidev.UserEventsController">
+   <children>
+      <TabPane prefHeight="603.0" prefWidth="900.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Tous les evenements">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="15.0" layoutY="14.0" minWidth="60.0" text="Tous les evenements" textFill="#9f9f9f">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableEvents" layoutX="15.0" layoutY="95.0" prefHeight="402.0" prefWidth="871.0">
+                           <columns>
+                              <TableColumn fx:id="nom" prefWidth="149.0" text="Titre" />
+                              <TableColumn fx:id="prix" prefWidth="105.0" text="Prix" />
+                              <TableColumn fx:id="capacite1" prefWidth="83.0" text="Disponible" />
+                              <TableColumn fx:id="date_events" prefWidth="127.0" text="Date" />
+                              <TableColumn fx:id="localisation" prefWidth="121.0" text="Localisation" />
+                              <TableColumn fx:id="description" prefWidth="284.0" text="Description" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="supprimerEvents" layoutX="806.0" layoutY="52.0" mnemonicParsing="false" onAction="#ParticipateAction" text="Participer" />
+                        <TextField fx:id="searchEvents" layoutX="59.0" layoutY="52.0" prefHeight="25.0" prefWidth="214.0" />
+                        <Text layoutX="15.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="35.26171875" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab text="Mes Participations">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Label layoutX="18.0" layoutY="14.0" minWidth="60.0" text="Mes Participations" textFill="#9f9f9f">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tableEvents1" layoutX="15.0" layoutY="94.0" prefHeight="402.0" prefWidth="871.0">
+                           <columns>
+                              <TableColumn fx:id="nom1" prefWidth="149.0" text="Titre" />
+                              <TableColumn fx:id="prix1" prefWidth="105.0" text="Prix" />
+                              <TableColumn fx:id="capacite11" prefWidth="83.0" text="Disponible" />
+                              <TableColumn fx:id="date_events1" prefWidth="127.0" text="Date" />
+                              <TableColumn fx:id="localisation1" prefWidth="121.0" text="Localisation" />
+                              <TableColumn fx:id="description1" prefWidth="284.0" text="Description" />
+                           </columns>
+                        </TableView>
+                        <Button fx:id="supprimerEvents1" layoutX="820.0" layoutY="56.0" mnemonicParsing="false" onAction="#DelEventAction" text="Supprimer" />
+                        <TextField fx:id="searchEvents1" layoutX="70.0" layoutY="56.0" prefHeight="25.0" prefWidth="214.0" />
+                        <Text layoutX="18.0" layoutY="73.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Search" wrappingWidth="35.26171875" />
+                        <Button fx:id="supprimerEvents11" layoutX="693.0" layoutY="56.0" mnemonicParsing="false" onAction="#ExportPDF" text="Exporter ticket PDF" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</VBox>
