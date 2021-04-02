@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="805.0" prefWidth="808.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="achref.MyPlaylistController">
+   <children>
+      <TableView fx:id="table" layoutX="65.0" layoutY="445.0" onDragDetected="#handleMouseAction" onMouseClicked="#handleMouseAction" prefHeight="307.0" prefWidth="695.0">
+        <columns>
+          <TableColumn fx:id="id" minWidth="0.0" prefWidth="15.0" text="id" />
+          <TableColumn fx:id="nom" prefWidth="142.0" text="Piste" />
+            <TableColumn fx:id="photo" prefWidth="128.0" text="Photo" />
+            <TableColumn fx:id="description" prefWidth="185.0" text="Description" />
+            <TableColumn fx:id="album" prefWidth="214.0" text="Album" />
+        </columns>
+      </TableView>
+      <Button layoutX="101.0" layoutY="761.0" mnemonicParsing="false" onAction="#play" text="Play" />
+      <Button layoutX="209.0" layoutY="761.0" mnemonicParsing="false" onAction="#stop" text="Stop" />
+      <TableView fx:id="table1" layoutX="17.0" layoutY="37.0" onMouseClicked="#handleMouseAction1" prefHeight="332.0" prefWidth="773.0">
+         <columns>
+            <TableColumn fx:id="id1" minWidth="8.0" prefWidth="11.0" text="ID" />
+            <TableColumn fx:id="nom1" prefWidth="104.0" text="Nom" />
+            <TableColumn fx:id="urlpiste" minWidth="2.0" prefWidth="3.0" text="piste" />
+            <TableColumn fx:id="image" prefWidth="147.0" text="photo" />
+            <TableColumn fx:id="description1" prefWidth="208.0" text="Description" />
+            <TableColumn fx:id="album1" prefWidth="171.0" text="Album" />
+            <TableColumn fx:id="photo1" minWidth="7.0" prefWidth="7.0" text="photo" />
+            <TableColumn fx:id="artiste" minWidth="7.0" prefWidth="99.0" text="Artiste" />
+         </columns>
+      </TableView>
+      <ComboBox fx:id="albumcombo" layoutX="256.0" layoutY="6.0" onAction="#getAlbum" prefHeight="31.0" prefWidth="187.0" />
+      <Button layoutX="254.0" layoutY="393.0" mnemonicParsing="false" onAction="#ajouter" text="Ajouter" />
+      <Button layoutX="434.0" layoutY="393.0" mnemonicParsing="false" onAction="#supprimer" text="Supprimer" />
+   </children>
+</AnchorPane>
