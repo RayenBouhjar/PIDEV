@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="ahmedArtiste.jnlp">
+  <information>
+    <title>ahmedArtiste</title>
+    <vendor>skand</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="ahmedArtiste.jar" size="43489" download="eager" />
+    <jar href="lib\commons-codec-1.15.jar" size="353793" download="eager" />
+    <jar href="lib\commons-io-2.7.jar" size="276413" download="eager" />
+    <jar href="lib\commons-logging-1.2.jar" size="61829" download="eager" />
+    <jar href="lib\controlsfx-8.40.11.jar" size="985420" download="eager" />
+    <jar href="lib\httpclient-4.5.13.jar" size="780321" download="eager" />
+    <jar href="lib\httpcore-4.4.13.jar" size="328593" download="eager" />
+    <jar href="lib\jackson-annotations-2.12.1.jar" size="75700" download="eager" />
+    <jar href="lib\jackson-core-2.12.1.jar" size="365214" download="eager" />
+    <jar href="lib\jackson-databind-2.12.1.jar" size="1514483" download="eager" />
+    <jar href="lib\jackson-datatype-jsr310-2.12.1.jar" size="120320" download="eager" />
+    <jar href="lib\javax.activation-api-1.2.0.jar" size="56674" download="eager" />
+    <jar href="lib\jaxb-api-2.3.1.jar" size="128076" download="eager" />
+    <jar href="lib\jjwt-api-0.11.2.jar" size="78784" download="eager" />
+    <jar href="lib\jjwt-impl-0.11.2.jar" size="78853" download="eager" />
+    <jar href="lib\jjwt-jackson-0.11.2.jar" size="8400" download="eager" />
+    <jar href="lib\mysql-connector-java-5.1.23-bin.jar" size="834126" download="eager" />
+    <jar href="lib\mysql-connector-java-8.0.23.jar" size="2415211" download="eager" />
+    <jar href="lib\slf4j-api-1.7.30.jar" size="41472" download="eager" />
+    <jar href="lib\twilio-8.9.0.jar" size="4206744" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="ahmedArtiste" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="ahmedartiste.AhmedArtiste"  name="ahmedArtiste" />
+  <update check="always"/>
+</jnlp>
