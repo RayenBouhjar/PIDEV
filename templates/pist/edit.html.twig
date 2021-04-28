@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Pist{% endblock %}
+
+{% block body %}
+    <h1>Edit Pist</h1>
+
+    {{ include('pist/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('pist_index') }}">back to list</a>
+
+    {{ include('pist/_delete_form.html.twig') }}
+{% endblock %}

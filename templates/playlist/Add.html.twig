@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}} ) }}
+    <h1 style="color: #FFFFFF">Ajouter Playlist</h1>
+    <br>
+    {{ form_errors(form.nom) }}
+    {{ form_label(form.nom,"Nom de la playlist") }}
+    <br>
+    {{ form_widget(form.nom) }}
+    {{ form_errors(form.date) }}
+    <br>
+    {{ form_label(form.date,"Date de création") }}
+    <br>
+    {{ form_widget(form.date) }}
+    {{ form_end(form) }}
+{% endblock %}

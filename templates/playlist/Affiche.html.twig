@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1>Liste des playlists</h1>
+    <table border="1">
+        <tr>
+            <th style="color: #FFFFFF">ID</th>
+            <th style="color: #FFFFFF">Nom</th>
+            <th style="color: #FFFFFF">DATE</th>
+            <th style="color: #FFFFFF">Update</th>
+            <th style="color: #FFFFFF">Delete</th>
+        </tr>
+        <tr {% for p in playlist%}>
+            <td style="color: #FFFFFF">{{ p.id }}</td>
+            <td style="color: #FFFFFF">{{ p.nom }}</td>
+            <th>{{ p.date ? p.date|date('Y-m-d') : '' }}</th>
+            <td style="color: #FFFFFF"><a href="{{ path('update',{'id':p.id}) }}">Update</a></td>
+            <td style="color: #FFFFFF"><a href="{{ path('d',{'id':p.id}) }}">Delete</a></td>
+        </tr {% endfor %}>
+    </table>
+    <a href="{{ path('Add') }}">Ajouter Playlist</a>
+    {% block telecharger %}
+        <div class="col-md-3"><a href="{{path('generatePDF')}}" class="btn btn-primary">Telecharger PDF</a> </div>
+
+    {% endblock %}
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Pist index{% endblock %}
+
+{% block body %}
+    <h1>Pist List</h1>
+<form method="post" action="{{ path('recherche') }}">
+    <label>Rechercher</label>
+    <input type="text" name="search" class="form-control"><input type="submit" value="Recherche">
+</form>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nom</th>
+                <th>Path</th>
+                <th>Playlist</th>
+                <th>Rating</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for pist in pists %}
+            <tr>
+                <td>{{ pist.id }}</td>
+                <td>{{ pist.nom }}</td>
+                <td>{{ pist.path }}</td>
+                <td>{{ pist.playlist.nom }}</td>
+                <td>{{ pist.rating }}</td>
+                <td>
+                    <a href="{{ path('pist_show', {'id': pist.id}) }}">show</a>
+                    <a href="{{ path('pist_edit', {'id': pist.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="5">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('pist_new') }}">Create new</a>
+{% endblock %}
